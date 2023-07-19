@@ -1,7 +1,7 @@
 #include "main.h"
 /**
- *  _islower - 'Function that checks for lowercase character'
- *
+ *  _islower - Entry level
+ *  Description: 'Function that checks for lowercase character'
  * Return: 1 for lower character 0 for anything else
  */
 
