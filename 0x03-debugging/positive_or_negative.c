@@ -3,7 +3,7 @@
 /**
  * positive_or_negative - 'Test negative and positive function'
  * @i: correct output when given a case of 0
- * Return: void
+ * Return: 0
  */
 void positive_or_negative(int i)
 {
