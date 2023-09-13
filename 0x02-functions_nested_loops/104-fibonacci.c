@@ -1,26 +1,28 @@
-#include <stdio.h>
+#include<stdio.h>
+#include<stdio.lib>
 
-void genFibonacci(int n) {
-    long long int fib[n];
-    fib[0] = 1;
-    fib[1] = 2;
+/**
+ * Description:'a program that finds and prints the first 98 Fibonacci numbers, starting with 1 and 2, followed by a new line.'
+ * @n:
+ * Return: Always 0.
+ */
 
-    for (int i = 2; i < n; i++) {
-        fib[i] = fib[i - 1] + fib[i - 2];
-    }
+void printFibonacci(int n) {
 
-    for (int i = 0; i < n; i++) {
-        printf("%lld", fib[i]);
-        if (i < n - 1) {
-            printf(", ");
-        }
-    }
-    printf("\n");
+	int a = 1, b = 2, c;
+	printf("%d, %d", a, b);
+
+	for(int i = 3; i <= n; i++) {
+		c = a + b;
+		printf(", %d", c);
+		a = b;
+		b = c;
+	}
+	printf("\n");
 }
 
 int main() {
-    int n = 98;
-    printf("The first %d Fibonacci numbers are:\n", n);
-    genFibonacci(n);
-    return 0;
+	int n = 98;
+	printFibonacci(n);
+	return 0;
 }

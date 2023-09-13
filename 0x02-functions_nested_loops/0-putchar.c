@@ -6,6 +6,7 @@
   */
 int main(void)
 {
+/* Description: 'Prints the word _putchar'*/
 _putchar('_');
 _putchar('p');
 _putchar('u');
