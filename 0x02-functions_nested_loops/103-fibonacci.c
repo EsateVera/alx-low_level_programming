@@ -1,5 +1,5 @@
 #include <stdio.h>
-#include<stdio.lib>
+
 /**
  * Description:'a program that finds and prints the sum of the even-valued terms, followed by a new line'
  * Return: Always 0
