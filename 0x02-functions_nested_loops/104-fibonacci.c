@@ -6,22 +6,40 @@
  * Return: Always 0.
  */
 
-void printFibonacci(int n) {
 
-	int a = 1, b = 2, c;
-	printf("%d, %d", a, b);
-
-	for(int i = 3; i <= n; i++) {
-		c = a + b;
-		printf(", %d", c);
-		a = b;
-		b = c;
+// Function to calculate and print Fibonacci numbers recursively
+void printFibonacci(int a, int b, int count, int maxCount) {
+    
+	if (count > maxCount) {
+		printf("\n");
+		return;
 	}
-	printf("\n");
+
+	// Print the current Fibonacci number
+	printf("%d", a);
+
+	// Print a comma and space unless it's the last number
+	if (count < maxCount) {
+		printf(", ");
+	}
+
+	// Calculate the next Fibonacci number
+	int next = a + b;
+
+	// Recursive call with updated values
+	printFibonacci(b, next, count + 1, maxCount);
 }
 
 int main() {
-	int n = 98;
-	printFibonacci(n);
+	int n = 50;
+	int a = 1, b = 2;
+
+	// Print the first two Fibonacci numbers manually
+	printf("%d, %d, ", a, b);
+
+	// Call the recursive function to print the rest
+	printFibonacci(b, a + b, 3, n);
+
 	return 0;
 }
+
