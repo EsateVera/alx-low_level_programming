@@ -6,8 +6,8 @@
  * Return: Always 0 (Success)
 */
 
-int main()
+int main(void)
 {
 	printf("File: %s\n", _FILE_);
-	return 0;
+	return (0);
 }
